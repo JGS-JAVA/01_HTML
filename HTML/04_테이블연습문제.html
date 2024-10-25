@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 태그 활용하기</title>
+    
+    <!--style 태그: 태그에 스타일 적용법 3개
+    1 <table style="">
+    2 <style> 태그 작성후 안에 설정할 태그명 작성후 {} 로 묶기
+    3 <>
+    -->
+
+    <!--예제코드
+
+    태그1번 {
+        속성 A 설정
+    }
+    태그2번 {
+        속성 A 설정
+    } 는~
+    
+    태그1번, 태그2번 {
+       
+       } 와 같다
+        background-color: 배경색
+        text-align: 글자 정렬
+        margin: 0 auto: 표 자체를 가운데로 정렬
+    -->
+    <style>
+        table {
+            
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        
+        <!--여러태그에 동일한 스타일 적용시 태그, 태그, 태그 {동일한 스타일 속성}-->
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            }
+        
+        thead {
+            background-color: rgb(255, 186, 224);
+
+        }
+        tbody {
+            background-color: rgb(255, 177, 131);
+
+        }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <h1>상품목록</h1>
+
+    <!-- table 태그 옆에 스타일 작성법
+    table style="border-collapse: collapse" border="1"-->
+
+    <table><!--스타일들만 따로 묶어서 작성법-->
+      <thead>
+        <tr>
+          <th>상품명</th>
+          <th>가격</th>
+          <th>재고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>노트북</td>
+          <td>1,500,000원</td>
+          <td>5대</td>
+        </tr>
+        <tr>
+          <td>스마트폰</td>
+          <td>900,000원</td>
+          <td>10개</td>
+        </tr>
+        <tr>
+          <td>태블릿</td>
+          <td>600,000원</td>
+          <td>7개</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+            <td colspan="3">총 상품수 : 3</td>
+
+        </tr>
+
+      </tfoot>
+
+    </table>
+  </body>
+</html>

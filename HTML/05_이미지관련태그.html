@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>img 태그 사용하기</h1>
+    <pre>
+        웹문서에서 사진,그림 이미지 삽입용 태그
+        [속성] 태그 우측에 작성한 내용
+        1. src: 삽입이미지 경로작성
+        2. width / height : 너비/높이
+        3. alt : 이미지설명 작성
+         ->이미지 안보일때 이미지 이름출력
+         ->스크린 리더가 이미지설명 읽어줌
+         * 스크린 리더: 텍스트 읽어줌
+         이미지는 닫는태그 없음
+    </pre>
+    <h3>이미지 가져오는 예제</h3>
+
+    <img src="dog.jpeg" alt="라떼사진" width="300px">
+    <img src="cat.jpeg" alt="냐옹사진" width="300px">
+    <img src="main-image.jpg" width="300px" height="300px">
+    <img src="new-menu.png" width="300px" height="300px">
+
+    <h3>외부 이미지 가져오기</h3>
+    <img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif">
+    <img src="https://blog.kakaocdn.net/dn/mXGNJ/btqKYmqgaRG/w1fGh2UEElyGai5fLg4V0K/img.gif">
+    <!-- 가로세로 % 로 상대크기 조정가능-->
+     <!--div 태그: 큰 형식 없이 글자나 이미지나 동영상 담는 틀역할-->
+    <!---->
+    
+     <div style="border: 1px solid black; width: 1000px; height: 300px; display: flex;">
+        <img src="cat.jpeg" width="25%" height="70%">
+        <img src="dog.jpeg"width="25%" height="70%">
+        <img src="main-image.jpg"width="25%" height="70%">
+        <img src="new-menu.png"width="25%" height="70%">
+
+    </div>
+
+</body>
+</html>

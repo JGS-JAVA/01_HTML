@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표연습3</title>
+    <h1>도서목록</h1>
+    <!-- style 태그 위치 어디든 상관없으나 head 탭 안에 넣는게 일반적-->
+    <style>
+        table {
+            
+            border: 1mm solid black;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        
+        <!--여러태그에 동일한 스타일 적용시 태그, 태그, 태그 {동일한 스타일 속성}-->
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            }
+        
+        thead {
+            background-color: darkblue;
+            color: white;
+        }
+        tbody {
+            background-color: lightgray;
+
+        }
+        tfoot {
+            background-color: lightyellow;
+
+        }
+        h1 {
+            text-align: center;
+
+        }
+    </style>
+
+
+</head>
+<body>
+  <table>
+    <thead>
+        <tr>
+            <td>제목</td>
+            <td>저자</td>
+            <td>가격</td>
+            <td>재고</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>데미안</td>
+            <td>헤르만</td>
+            <td>1500</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>노인과 바다</td>
+            <td>헤밍</td>
+            <td>1800</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>죄와벌</td>
+            <td>도스토</td>
+            <td>1200</td>
+            <td>5</td>
+        </tr>
+    </tbody>
+    
+    <tfoot>
+        <td colspan="4">총도서수 : 3권</td>
+    </tfoot>
+  </table>
+</body>
+</html>

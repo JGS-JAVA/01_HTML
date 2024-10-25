@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지와 테이블 예제</title>
+</head>
+<body>
+    <h1>상품 정보</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>이미지</th>
+                <th>상품명</th>
+                <th>가격</th>
+
+            </tr>
+            <style>
+                img {
+                    width: 150px;
+
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border: 1px solid#ddd;
+                    margin: 0 auto;
+                    
+                }
+                tr, td, h1, th {
+                    border: 1px solid #ddd;
+                    text-align: center;
+                thead, tfoot {
+                    background-color: #f2f2f2;
+                }    
+                }
+            </style>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"></td>
+                <td>애니메이션 상품</td>
+                <td>5만원</td>
+
+            </tr>
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/mXGNJ/btqKYmqgaRG/w1fGh2UEElyGai5fLg4V0K/img.gif"></td>
+                <td>GIF 이미지 상품</td>
+                <td>7만원</td>
+
+            </tr>
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/oM3sE/btqKZnvEYhy/3Vbl5wumKextYqKk7q1UsK/img.gif"></td>
+                <td>스페셜 이미지 상품</td>
+                <td>12만원</td>
+
+            </tr>
+            
+
+        </tbody>
+        
+    </table>
+    <tfoot >
+        <tr>
+            <th colspan="2">총상품수 3개</th>
+    </tr>
+    </tfoot>
+    
+</body>
+</html>

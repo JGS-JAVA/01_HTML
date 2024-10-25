@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표 관련 태그</title>
+  </head>
+  <body>
+    <h1 style="color: green">표 관련 기본 태그</h1>
+
+    <!--pre 태그: p 태그와 달리 공백,스타일 모두표기,실무X-->
+    <pre>
+          웹 문서에서 자료정리때 사용
+          table 태그는 행,열을 작성할 판 표시
+          table row 태그는 테이블의 한 행을 나타냄
+          table data 태그는 한 행의 한 컬럼 나타냄 ~엑셀의 셀하나
+                    
+
+    </pre>
+
+    <h4>테이블 연습 1</h4>
+    <!--
+    테이블 태그 안에 tr td 로 작성한 태그가 존재해야함
+    table 속성: 태그에 스타일 적용
+                스타일 작성시 ; 로 구분
+                스타일은 한 줄에 여러 스타일 작성가능
+    border-collapse: 테두리와 셀td 사이 간격 설정 
+               collapse : 테두리와 셀 간격 없애기
+               border = "숫자" : 표테두리 굵기설정, 1부터 숫자 커질수록 두께 굵다
+    table style="border-collapse: collapse" border="4"
+    <table style="border-collapse: collapse" border="4">
+        tr = 가로 한줄
+        td = 한칸
+        
+        <tr>
+            <td>한칸내용</td>
+         </tr>
+         
+        
+    </table>
+    -->
+
+    <table style="border-collapse: collapse" border="4">
+      <tr>
+        <td>이름</td>
+
+        <td>나이</td>
+
+        <td>주소</td>
+      </tr>
+
+      <tr>
+        <td>홍길동</td>
+        <td>25</td>
+        <td>서울 중구</td>
+      </tr>
+
+      <tr>
+        <td>김미영</td>
+
+        <td>23</td>
+        <td>서울 강남구</td>
+      </tr>
+    </table>
+
+    <!-- shift + alt + f : 자동정렬 단축키 -->
+  </body>
+  <hr />
+  <hr />
+
+  <h2>테이블 관련 추가 태그</h2>
+  <h3>Table Header 태그</h3>
+  <pre>
+        테이블 제목, 내용강조
+        두꺼운글씨, 가운데정렬 자동
+        주로 표 세로 한줄 제목으로 사용
+    </pre
+  >
+
+  <table style="border-collapse: collapse" border="1">
+    <tr>
+      <!-- 가로로 첫번째 줄에 위치 -->
+      <th>브라우저</th>
+      <th>제조사</th>
+      <td>홈페이지</td>
+    </tr>
+    <tr>
+      <td>크롬</td>
+      <td>구글</td>
+      <td>
+        <!-- a: 하이퍼링크 태그
+                 href: a 태그안에 함께 쓴다, 이동주소값 
+            -->
+        <a href="https://www.google.com/"> 이동하기 </a>
+      </td>
+    </tr>
+    <tr>
+      <td>네이버</td>
+      <td>네이버</td>
+      <td>
+        <a href="https://www.naver.com/"> 이동하기 </a>
+      </td>
+    </tr>
+
+  </table>
+
+  <hr><hr>
+</html>

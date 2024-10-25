@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 관련 응용태그</title>
+</head>
+<body>
+    <h1>테이블 관련 추가 태그</h1>
+
+    <pre>
+        [테이블 영역 지정 태그]
+        thead 태그: 테이블 상단 영역(컬럼 제목 작성공간)
+        tbody 태그: 테이블 중단 영역(컬럼 내용/값 작성공간)
+        tfoot 태그: 테이블 하단 영역(컬럼 합계/인원수작성공간)
+        
+        (참고사항)
+        table 태그를 th, tb, tf 로 안나누면 tbody에 작성된것으로 취급
+    </pre>
+
+    <table style="border-collapse: collapse;" border="1">
+        <thead style="background-color: yellowgreen;">
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+
+
+            </tr>
+
+        </thead>
+        <tbody style="background-color: yellow;">
+            
+            <tr>
+                <td>김영희</td>
+                <td>40</td>
+                <td>서울시 강남구</td>
+            </tr>
+
+            <tr>
+                <td>박철수</td>
+                <td>50</td>
+                <td>경기도 파주시</td>
+            </tr>
+
+        </tbody>
+<!--행,열 병합속성: rowspan,colspan
+        병합,합병: 둘 이상을 합치는것
+        몇칸을 차지할지 정한다
+        rowspan: 세로로 몇칸 차지할지
+        colspan: 가로로 몇칸 차지할지
+-->
+        <tfoot style="background-color: orange; color: white;">
+            <tr>
+                <th colspan="2">총인원</th>
+                <th>3명</th>
+            </tr>
+
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>

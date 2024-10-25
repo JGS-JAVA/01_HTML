@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼</title>
+    <style>
+      div {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!--div 태그는 반드시 body 태그 안에 존재-->
+    <!--h1 제목태그는 div 밖에 있어도 됨-->
+
+    <div>
+      <h1>회원가입 폼</h1>
+      <label>고객명: </label>
+      <input type="text" placeholder="고객명을 입력해주세요" />
+      <br />
+      <br />
+      <label>전화번호: </label>
+      <input type="tel" placeholder="전화번호를 입력해주세요" />
+      <br />
+      <br />
+      <label>Email: </label>
+      <input type="text" placeholder="example@email.com" />
+      <br />
+      <br />
+      <label>피자선택: </label>
+      <select name="피자">
+        <option>베이컨포테이토 피자</option>
+        <option>콰트로치즈 피자</option>
+        <option>고르곤졸라치즈 피자</option>
+        <option>갈릭스테이크</option>
+      </select>
+
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="피자 사이즈" /> Small
+        <br />
+        <input type="radio" name="피자 사이즈" /> Medium
+        <br />
+        <input type="radio" name="피자 사이즈" /> Large
+      </fieldset>
+    </div>
+  </body>
+</html>

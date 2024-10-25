@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서목록 예제</title>
+    <style>
+        table {
+            border: 1px solid color;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid ;
+            text-align: center;
+        }
+        thead {
+            background-color: aliceblue;
+        }
+        tbody {
+            background-color: antiquewhite;
+        }
+        tfoot {
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>도서 목록</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>저자</th>
+                <th>가격</th>
+                <th>재고</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>나는 읽고 쓰고 버린다</td>
+                <td>손웅정</td>
+                <td>15,000</td>
+                <td>3</td>
+             </tr>
+             <tr>
+                <td>노인과 바다</td>
+                <td>헤밍웨이</td>
+                <td>12,000</td>
+                <td>8</td>
+             </tr>
+             <tr>
+                <td>죄와 벌</td>
+                <td>톨스토이</td>
+                <td>18,000</td>
+                <td>5</td>
+             </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+            <td colspan="4">  총 도서수 3권
+
+            </td>
+            </tr>
+            </tfoot>
+
+    </table>
+</body>
+</html>
