@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS선택자1</title>
+    <style>
+      h1 {
+        color: orange; /*글자색*/
+      }
+      strong {
+        font-size: 18px; /*기본 16px*/
+        font-family: "Courier New", Courier, monospace;
+        /*글꼴. 선택한 글꼴 부재시 자동으로 다음순번 글꼴 선택, 컴마로 구분작성, ';'으로 종료*/
+        color: steelblue;
+      }
+      code {
+        background-color: lightcoral;
+        display: block;
+        /*배치방식결정, 블록은 항상 새 줄에서 시작하고 가로너비 모두차지 width: 100% 처럼 동작
+        여러개의 블록이 나란히 배치되지 않음 div, h1~h6, p 태그는 블록 기본설정됨*/
+        font-weight: bold; /*글자두께*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS선택자1</h1>
+    <h3>태그 선택자</h3>
+    <pre>
+        현재 문서의 특정태그 모두찾아 선택
+        <strong>[작성법]</strong>
+        <code>
+            태그명 {
+                css 코드;
+            }
+        </code>
+    </pre>
+    <h3>id(#) 태그 선택자</h3>
+    <pre>
+        HTML 문서 내에서 id 
+        일치하는 요소 선택
+        <strong>[작성법]</strong>
+        <code>
+            #id이름 {
+                css 코드;
+            }
+        </code>
+    </pre>
+    <style>
+      /*#id 이름으로 디자인 부분적용*/
+      #선택1번 {
+        background-color: yellowgreen;
+      }
+      #선택2번 {
+        background-color: orange;
+      }
+      #선택3번 {
+        background-color: lightblue;
+      }
+    </style>
+    <!--id활용한 디자인 부분설정-->
+    <ol>
+      <li id="선택1번">id 선택자 테스트 1</li>
+      <li id="선택2번">id 선택자 테스트 2</li>
+      <li id="선택3번">id 선택자 테스트 3</li>
+    </ol>
+    <hr />
+    <h3>class(.) 선택자</h3>
+    <pre>
+        html 문서내에서 class 속성값 일치하는 
+        모든요소 선택
+        style에선 class 주로 사용
+        id값 주로 자바스크립트
+        class를 디자인에서 많이 사용해야함
+        <strong>[작성법]</strong>
+        <code>
+            .class이름명 {
+                class 코드;
+            }
+        </code>
+    </pre>
+    <style>
+      /*class(.) 선택자*/
+      .테스트1 {
+        background-color: black;
+        color: white;
+      }
+      .테스트2 {
+        background-color: pink;
+        color: white;
+      }
+    </style>
+    <p class="테스트1">class 선택자 테스트</p>
+    <p class="테스트2">class 선택자 테스트</p>
+    <p class="테스트1">class 선택자 테스트</p>
+    <p class="테스트2">class 선택자 테스트</p>
+    <p class="테스트1">class 선택자 테스트</p>
+    <p class="테스트2">class 선택자 테스트</p>
+
+    <hr />
+    <hr />
+    <hr />
+    <style>
+      .test-1 {
+        background-color: orange;
+      }
+      .test-2 {
+        font-size: 30px;
+      }
+    </style>
+    <ul>
+      <li class="test-1">클래스 선택자 테스트1</li>
+      <li class="test-2">클래스 선택자 테스트2</li>
+
+      <li class="test-1">클래스 선택자 테스트1</li>
+      <li class="test-2">클래스 선택자 테스트2</li>
+
+      <li class="test-1">클래스 선택자 테스트1</li>
+      <li class="test-2">클래스 선택자 테스트2</li>
+    </ul>
+    /*ctrl + f = 특정단어 찾거나 바꾸기 ctrl + shift + z = 취소를 취소하기*/
+  </body>
+</html>
