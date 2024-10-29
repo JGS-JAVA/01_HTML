@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 2 활용하기</title>
+    <style>
+      .num-ul {
+        list-style-type: none;
+      }
+      .num-li {
+        padding: 15px;
+        background-color: lightgray;
+        border-radius: 8px;
+        font-size: 18px;
+        margin: 30px; /*br 태그 대용 상하좌우 여백설정*/
+      }
+      li:hover {
+        background-color: lightcoral;
+        color: white;
+        transform: translateX(30px);
+      }
+      .alphabet-ul {
+        list-style-type: none;
+      }
+      .alphabet-li {
+        padding: 20px;
+        margin: 10px;
+        background-color: #ddd;
+        border-radius: 8px;
+        font-size: 20px;
+      }
+      .alphabet-li:hover {
+        background-color: black;
+        color: white;
+        transform: translateY(-15px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hover 효과 있는 리스트</h1>
+      <ul class="num-ul">
+        <li class="num-li">리스트 항목 1</li>
+        <li class="num-li">리스트 항목 2</li>
+        <li class="num-li">리스트 항목 3</li>
+        <li class="num-li">리스트 항목 4</li>
+        <li class="num-li">리스트 항목 5</li>
+      </ul>
+      <ul class="alphabet-ul">
+        <li class="alphabet-li">리스트 항목 A</li>
+        <li class="alphabet-li">리스트 항목 B</li>
+        <li class="alphabet-li">리스트 항목 C</li>
+        <li class="alphabet-li">리스트 항목 D</li>
+        <li class="alphabet-li">리스트 항목 E</li>
+      </ul>
+    </div>
+  </body>
+</html>

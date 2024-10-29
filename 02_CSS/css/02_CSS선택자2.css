@@ -25,3 +25,32 @@ h1 {
   color: white;
   font-size: 30px;
 }
+
+.hover-box {
+  border: 3px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+.hover-box:hover {
+  /*background-image: 배경이미지*/
+  /*background-size: 배경이미지 크기지정*/
+  background-image: url("../../01_HTML/cat.jpeg");
+  background-size: cover; /*div 크기에 맞게 이미지크기 조절*/
+}
+.호버-박스 {
+  border: 3px dotted orange;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+.호버-박스:hover {
+  background-image: url("../../01_HTML/flower1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
