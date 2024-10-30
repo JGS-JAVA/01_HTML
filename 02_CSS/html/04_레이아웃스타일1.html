@@ -5,5 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>레이아웃스타일1</title>
   </head>
-  <body></body>
+  <body>
+    <h1>레이아웃스타일1</h1>
+    <pre>
+        배치, 정리
+        제한된 공간에 구성요소를 효율적으로 배치
+    </pre>
+    <h3>화면배치(표시,형식) : display 속성</h3>
+    <pre>
+        요소가 화면에 어떻게 보여질지 형식지정
+        -block : 화면을 수직분할 (행나눔, 한줄다차지)
+            width, height 지정가능
+        -inline : 화면 수평분할 (하나의 행의 열을 나눔 == 글자, 문자열 생각)
+        -inline-block : inline 의 수평분할 + block 의 width, height 지정
+        -noe : 요소는 존재하나 화면에는 보이지 않게함
+        -flex : 요소의 정렬되는 방향, 요소 간의 간격을 유연하게 처리
+        -grid : 격자무늬 형식으로 화면 쉽게분할    
+    </pre>
+
+    <h4>block 형식의 요소를 inline 형식으로 변경</h4>
+    <style>
+      .block {
+        border: 1px solid black;
+        width: 150px;
+        height: 150px;
+        color: white;
+        display: inline;
+      }
+      .영역1번 {
+        background-color: red;
+      }
+      .영역2번 {
+        background-color: orange;
+      }
+      .영역3번 {
+        background-color: yellow;
+      }
+      .영역4번 {
+        background-color: green;
+      }
+      .영역5번 {
+        background-color: blue;
+      }
+      /*div 는 기본으로 block 스타일 깔림
+      특정 div 위치에 디자인 부분적용시
+      클래스명 옆에 클래스명 하나더 쓴다
+      동일한 클래스명이 있으면 마지막게 적용됨*/
+    </style>
+    <div class="block 영역1번">1번 영역</div>
+    <div class="block 영역2번">2번 영역</div>
+    <div class="block 영역3번">3번 영역</div>
+    <div class="block 영역4번">4번 영역</div>
+    <div class="block 영역5번">5번 영역</div>
+  </body>
 </html>
