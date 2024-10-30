@@ -1,0 +1,44 @@
+h1 {
+  color: orange; /*글자색*/
+}
+strong {
+  font-size: 18px; /*기본 16px*/
+  font-family: "Courier New", Courier, monospace;
+  /*글꼴. 선택한 글꼴 부재시 자동으로 다음순번 글꼴 선택, 컴마로 구분작성, ';'으로 종료*/
+  color: steelblue;
+}
+code {
+  background-color: lightcoral;
+  display: block;
+  /*배치방식결정, 블록은 항상 새 줄에서 시작하고 가로너비 모두차지 width: 100% 처럼 동작
+        여러개의 블록이 나란히 배치되지 않음 div, h1~h6, p 태그는 블록 기본설정됨*/
+  font-weight: bold; /*글자두께*/
+}
+
+/*#id 이름으로 디자인 부분적용*/
+#선택1번 {
+  background-color: yellowgreen;
+}
+#선택2번 {
+  background-color: orange;
+}
+#선택3번 {
+  background-color: lightblue;
+}
+
+/*class(.) 선택자*/
+.테스트1 {
+  background-color: black;
+  color: white;
+}
+.테스트2 {
+  background-color: pink;
+  color: white;
+}
+
+.test-1 {
+  background-color: orange;
+}
+.test-2 {
+  font-size: 30px;
+}
