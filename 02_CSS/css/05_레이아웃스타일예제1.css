@@ -1,4 +1,19 @@
 /*전체 배경색상 줄때 바디 태그에 작성*/
+
+a {
+  text-decoration: none;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 12px 24px;
+  /* 버튼패딩 상하 좌우 좌우=상하의 두배로 많이씀*/
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  display: inline-block;
+} /*a 태그 밑줄 제거*/
+a:hover {
+  background-color: #666;
+  color: #fff;
+}
 body {
   background-color: #1c1c1c;
   color: #f5f5f5;
@@ -15,9 +30,16 @@ h1 {
 /*h1 = 32px 기본이나 크기설정 가능*/
 .main {
   padding: 20px;
+  text-align: center;
+}
+.테마버튼 {
+  text-align: center;
+  /*display: inline-block; a나 img 태그에 직접 작성해 가운데 정렬하기
+  a태그는 inline 요소=가로한줄 전체가 아닌 부분만 차지*/
 }
 .information,
-.gallary {
+.gallary,
+.gallary2 {
   margin-bottom: 30px;
   background-color: #333;
   color: #f5f5f5;

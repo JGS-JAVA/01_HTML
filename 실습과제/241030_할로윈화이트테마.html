@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#127875; 할로윈 웹사이트</title>
+
+    <!--style이나 style 적용된 link태그를 body시작전에 head에 넣는 이유는
+            웹페이지 꾸미기 시작한다는 의미다
+            -->
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: #333333;
+      }
+      .header,
+      .footer {
+        background-color: #ffa500;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        color: #333333;
+      }
+      .main {
+        padding: 20px;
+      }
+      .information,
+      .gallery {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .images {
+        text-align: center;
+      }
+      .images img {
+        width: 150px;
+        border-radius: 8px;
+        margin-right: 50px;
+      }
+      a {
+        text-decoration: none;
+        padding-bottom: 30px;
+        background-color: #333;
+        color: #f5f5f5;
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: background-color 0.5s;
+      }
+      a:hover {
+        background-color: #f5f5f5;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>&#128123; 할로윈 파티에 오신 것을 환영합니다.&#127875;</h1>
+      </div>
+      <div class="main">
+        <div class="themaButton">
+          <a href="../02_CSS/html/05_레이아웃스타일예제1.html"
+            >Dark Thema로 변경하기</a
+          >
+        </div>
+        <div class="information">
+          <h2>&#127881; 할로윈의 밤, 잊지 못할 경험!</h2>
+          <p>
+            할로윈 밤을 특별하게! 신나는 이벤트와 함께 잊지 못할 추억을
+            만들어보세요.
+          </p>
+          <ul>
+            <li>&#129503; <strong>코스튬 콘테스트</strong></li>
+            <li>&#127874; <strong>사탕 나눔</strong></li>
+            <li>&#127926; <strong>음악과 댄스파티</strong></li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <h2>&#128247; Gallery</h2>
+          <div class="images">
+            <img src="../02_CSS/image/skull.jpg" />
+            <img src="../02_CSS/image/pumpkin.jpg" />
+            <img src="../02_CSS/image/web.jpg" />
+          </div>
+          <!--image-->
+        </div>
+        <!--gallery-->
+      </div>
+      <!--main-->
+      <div class="footer">
+        <p>&#128123; 모든 권리 보유 &copy;</p>
+      </div>
+    </div>
+    <!--container-->
+  </body>
+</html>
