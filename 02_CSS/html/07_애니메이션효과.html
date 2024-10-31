@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition 과 transform</title>
+  </head>
+  <body>
+    <h1>Transition 과 transform</h1>
+    <pre>
+        transition : 요소속성변경시 천천히 바뀌는 애니메이션 효과
+                             속성명        전환시간 전환속도곡선 전환시작전지연시간
+        (ex) transition: background-color    0.5s    linear      3s;   
+        (hover 나 active 에서 색지정.)          
+    </pre>
+    <h3>transform 속성</h3>
+    <pre>
+        transform : 이동,회전,크기조절,뒤집기 등 (띄어쓰기로 동시설정)
+        1. translate(10px, 20px) : (x축값, y축값)만큼 이동
+        2. rotate(45deg) : 시계방향 45도 회전
+        3. scale(1.5) : 요소 크기 1.5배 키우기
+        4. skew(10deg, 5deg) : 가로 오른쪽 10도, 세로 오른쪽 5도 기울이기
+        (ex) transform:translate(20px,10px) scale(1.2);
+    <h4>transition vs. transform</h4>
+    <pre>
+        트랜지션은 배경색, 글자크기,색,가로세로크기 등
+        속성값에 속도변화를 줄 수 있다
+        트랜스폼은 이동,기울기
+    </pre>
+    </pre>
+
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        /*transition 은 변화 시작전 요구조건
+        hover active focus visited 가 안붙은 태그에 작성*/
+        transition: background-color 0.7s, transform 0.5s;
+      }
+      .box:hover {
+        background-color: aqua;
+        /*transform 은 변하는 속성값에 직접작성*/
+        transform: rotate(45deg);
+      }
+    </style>
+
+    <div class="box">회전</div>
+  </body>
+</html>

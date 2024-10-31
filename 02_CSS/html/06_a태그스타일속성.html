@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이퍼링크 관련태그 - a 태그</title>
+    <style>
+      /*a태그 꾸밀때 링크색상, 밑줄제거 항시 사용
+      a태그는 사용자 행동을 3가지로 나눠 설정
+      active 클릭시- 글자색, 글자크기 조정
+      hover 커서올릴때
+      text-decoration : underline 밑줄추가
+      visited :사용자가 이미 방문한 링크에 스타일 지정-컬러
+      button input type="submit" 과 a 태그의 차이점
+         button input type="submit" 제출용도
+         a href 특정 주소나 링크로 이동용도 예)메인으로가기,뒤로가기
+      */
+      a {
+        color: orange;
+        text-decoration: none;
+      }
+      a:hover {
+        color: aqua;
+        text-decoration: underline;
+      }
+      a:active {
+        color: yellowgreen;
+        font-size: 25px;
+      }
+      a:visited {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>하이퍼링크 관련태그 - a 태그</h1>
+    <pre>
+        <a>하이퍼링크태그</a>
+        <a href="">하이퍼링크태그</a>
+        a태그 내부에 속성으로 href 작성시 글자색상과 밑줄생김
+    </pre>
+  </body>
+</html>

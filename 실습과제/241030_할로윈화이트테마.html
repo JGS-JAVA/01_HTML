@@ -9,6 +9,19 @@
             웹페이지 꾸미기 시작한다는 의미다
             -->
     <style>
+      ul {
+        list-style-type: none;
+        /*list-style: none 으로 해도됨*/
+      }
+      ul li {
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+      }
+      ul li:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 10px;
+      }
       body {
         background-color: #f2f2f2;
         color: #333333;
@@ -28,6 +41,7 @@
       }
       .information,
       .gallery {
+        margin-top: 30px;
         margin-bottom: 20px;
         padding: 20px;
         background-color: #ffffff;
@@ -54,6 +68,10 @@
       a:hover {
         background-color: #f5f5f5;
         color: #333;
+      }
+      .themaButton {
+        text-align: center;
+        /*특정태그에 display: inline-block 으로 가운데정렬함*/
       }
     </style>
   </head>
