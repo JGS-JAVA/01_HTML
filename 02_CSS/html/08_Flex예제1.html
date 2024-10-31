@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 레이아웃 예제1</title>
+  </head>
+  <body>
+    <h1>flex 레이아웃 예제1</h1>
+    <h3>예제 1 : 수평정렬 + 여백 (justify-content : space-around)</h3>
+    <style>
+      .container1 {
+        display: flex;
+        justify-content: space-around;
+        background-color: lightblue;
+        padding: 20px;
+      }
+      .container1 .item {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        /*아이템 내에서 display : flex 주면 글자 평평하게 하고 글자 가운데정렬*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <div class="container1">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+    </div>
+  </body>
+</html>
