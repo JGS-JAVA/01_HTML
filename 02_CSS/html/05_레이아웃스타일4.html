@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃스타일4</title>
+  </head>
+  <body>
+    <h1>position</h1>
+    <pre>
+        요소 배치(위치) 관련 스타일
+        위치지정 속성
+
+        position:relative 상대적인
+        지정된 요소 내부에 다른요소가 상대적 위치지정 하도록 기중이 되게함
+
+        position:absolute 절대적인
+        기본요소배치순서 무시하고 지정된 절대위치에 요소배치
+        z-index : 정수
+        가장 우선으로 보여지는 디자인. 겹칠때 숫자 클수록 선순위로 앞에 보여줌
+
+        z-index : 정수 단독으로 쓰이기도 함
+        relative, absolute, fixed, sticky 와 같이 사용됨
+        기본숫자는 0 이다. 
+        -2147483648 (32비트 최소값)
+        -1은 다른요소 아래에 깔림
+        0은 기본
+        1은 다른요소 위에 올라감
+        10 더 높은 우선순위를 가짐
+        +2147483647 (32비트 최대값)
+
+
+        fixed 고정된
+        항상 고정된 위치에 요소배치. 화면이 움직이든 말든 같은위치
+
+        position:sticky 
+        원래 요소가 보여지는 화면이면 position X
+        요소가 보여지는 화면을 벗어나면 fixed
+
+    </pre>
+
+    <h3>position: fixed</h3>
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #333;
+      }
+      .box1,
+      .box2,
+      .box3 {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+      }
+      .box1 {
+        background-color: red;
+        z-index: 1;
+        top: 50px;
+        left: 50px;
+      }
+      .box2 {
+        background-color: green;
+        z-index: 2;
+        top: 100px;
+        left: 100px;
+      }
+      .box3 {
+        background-color: blue;
+        z-index: 3;
+        top: 150px;
+        left: 150px;
+      }
+    </style>
+    <div class="container">
+      <div class="box 1">box</div>
+      <div class="box 2">box</div>
+      <div class="box 3">box</div>
+    </div>
+  </body>
+</html>

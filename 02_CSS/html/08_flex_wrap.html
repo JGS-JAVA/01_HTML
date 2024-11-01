@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex_wrap</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        /*justify-content:space-속성: 여백 자동설정
+            gap: 지정해서 여백설정*/
+        gap: 10px;
+        padding: 10px;
+        background-color: #ddd;
+      }
+      .container div {
+        padding: 20px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex_wrap 활용하기</h1>
+    <pre>
+        display: flex 가로정렬. 기존의 display 변경했음
+        flex_wrap: 여러 아이템이 작은 화면에서도 여러줄에 배치되게 설정
+        반응형 디자인
+        반응형: 화면가로크기에 따라 편한디자인 제공
+        본체모니터 800 1400px
+        태블릿 700 500px
+        핸드폰 400 300px
+    </pre>
+    <h3>display:flex 와 flex-wrap:wrap 활용</h3>
+    <div class="container">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세사리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+
+    <style>
+      .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #ddd;
+      }
+      .container2 div {
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        border-radius: 5px;
+      }
+    </style>
+    <h3>display:flex와 flex-wrap:wrap, justify-content 활용</h3>
+    <div class="container2">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세사리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+  </body>
+</html>

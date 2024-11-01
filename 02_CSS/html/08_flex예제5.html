@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 와 align-items 활용하기</title>
+    <style>
+      .container {
+        display: flex;
+        height: 200px;
+        background-color: #f0f8ff;
+        padding: 10px;
+      }
+      .container div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 와 align-items 활용하기</h1>
+    <h4>1번 : 중앙배치</h4>
+    <div class="container" style="align-items: center; justify-content: center">
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lightgoldenrodyellow">item 3</div>
+    </div>
+
+    <h4>2번 : 상단배치, 양끝여백X</h4>
+    <div
+      class="container"
+      style="align-items: flex-start; justify-content: space-between"
+    >
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lemonchiffon">item 3</div>
+    </div>
+
+    <h4>3번 : 하단배치, 양끝 반여백</h4>
+    <div
+      class="container"
+      style="align-items: flex-end; justify-content: space-around"
+    >
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lightgoldenrodyellow">item 3</div>
+    </div>
+
+    <h3>4번 세로로 스트레치, 왼쪽정렬</h3>
+    <small>요소에 height 적용X</small>
+    <small>align-items:stretch 보다 height 가 우선적용됨</small>
+    <div
+      class="container"
+      style="align-items: stretch; justify-content: flex-start"
+    >
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lightgoldenrodyellow">item 3</div>
+    </div>
+
+    <h3>5번 세로방향 가운데, 오른쪽정렬</h3>
+    <div
+      class="container"
+      style="align-items: center; justify-content: flex-end"
+    >
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lightgoldenrodyellow">item 3</div>
+    </div>
+
+    <h3>6번 상단정렬, 가로 중앙배치</h3>
+    <div
+      class="container"
+      style="align-items: flex-start; justify-content: center"
+    >
+      <div style="background-color: lightcoral">item 1</div>
+      <div style="background-color: lightblue">item 2</div>
+      <div style="background-color: lightgoldenrodyellow">item 3</div>
+    </div>
+  </body>
+</html>
