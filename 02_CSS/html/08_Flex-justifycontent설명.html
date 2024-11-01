@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diplay 플렉스 활용방안</title>
+    <style>
+      div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display flex-justifycontent</h1>
+    <pre>
+      justify-content:div (=container) 와 같은 태그를 가로방향정렬, 간격조절.
+      display:flex 작성시 
+      justify-content:flex-start 요소들이 컨테이너의 왼쪽정렬됨. 이미 존재함(기본값)
+      justify-content:flex-end 요소들이 컨테이너의 오른쪽정렬됨. 
+      justify-content:center 요소들이 컨테이너의 가운데정렬됨. 
+
+      동일한 태그들의 특정적 규칙을 제공한 상태로 정렬할 때 사용하는 방법
+      justify-content:space-between = 첫 번째 요소는 왼쪽 끝, 마지막은 오른쪽 끝. 나머지는 그 사이에 균등간격배열
+      |요소1        요소2        요소3        요소4|
+       0         8           8           8       0  
+      justify-content:space-around = 각 요소 사이 동일간격, 양 끝에 반간격.
+      |   요소1      요소2      요소3      요소4   |
+        3        6          6          6        3
+      justify-content:space-evenly = 각 요소 사이와 양 끝에 동일간격
+      |     요소1     요소2     요소3     요소4     |
+         5        5         5         5          5
+     
+    </pre>
+    <h3>가로 정렬(수평 중앙 정렬)</h3>
+    <p>display:flex + justify-content:center</p>
+    <p>
+      display:flex 는 세로로된 div 를 가로로 보기
+      <br />
+      justify-content:center 는 가로에 있는 div 를 가로에서 중앙정렬함
+    </p>
+    <div style="display: flex; justify-content: center; background-color: #ddd">
+      <div style="background-color: lightcoral">Item1</div>
+      <div style="background-color: lightblue">Item2</div>
+      <div style="background-color: lawngreen">Item3</div>
+    </div>
+    <hr />
+    <h3>요소 간격</h3>
+    <pre>
+        display:flex + justify-content:space-between
+        display:flex 세로로 된 div 가로로 보기설정
+        justify-content:space-between 첫번째와 마지막 태그를 양끝에 배치
+        나머지 태그들은 그 사이에 동일한 간격으로 정렬
+    </pre>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        background-color: #ddd;
+      "
+    >
+      <div style="background-color: lightcoral">Item1</div>
+      <div style="background-color: lightblue">Item2</div>
+      <div style="background-color: lawngreen">Item3</div>
+      <div style="background-color: lightgoldenrodyellow">Item3</div>
+    </div>
+    <hr />
+    <h3>요소 간격 - 양쪽 끝 살짝 간격 넣어줌</h3>
+    <pre>
+        <pre>
+            display:flex + justify-content:space-between
+            display:flex 세로로 된 div 가로로 보기설정
+            justify-content:space-around = 각 요소 사이에 동일한 간격을 주고 양 끝에도 반간격 준다
+        </pre>
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            background-color: #ddd;
+          "
+        >
+          <div style="background-color: lightcoral">Item1</div>
+          <div style="background-color: lightblue">Item2</div>
+          <div style="background-color: lawngreen">Item3</div>
+          <div style="background-color: lightgoldenrodyellow">Item3</div>
+        </div>
+        <hr />
+    </pre>
+  </body>
+</html>

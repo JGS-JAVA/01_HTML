@@ -1,0 +1,20 @@
+/*속성에서 배경색을 클래스와 아이디와 태그에서 동시사용시 우선순위대로 적용.
+      동일속성 아니면 모두 누적됨*/
+/*1순위 !important 스타일 잠금*/
+/*2순위 inline-style 태그 안에 직접작성*/
+/*3순위 아이디 선택자*/
+#아이디속성 {
+  color: white;
+  background-color: black;
+}
+/*4순위 클래스 선택자, 1순위 !important*/
+.클래스속성 {
+  background-color: green !important;
+}
+
+/*5순위 태그 선택자*/
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}

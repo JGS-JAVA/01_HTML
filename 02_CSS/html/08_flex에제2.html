@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해보기</title>
+    <style>
+      .container1 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: flex-start;
+      }
+      .container2 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: flex-end;
+      }
+      .container3 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: center;
+      }
+      .container4 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: space-around;
+      }
+      .container5 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: space-evenly;
+      }
+      .container6 {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        justify-content: space-between;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: lightblue;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 활용해보기</h1>
+    <p>justify-content 스타일은 우선순위2 로 적용할것</p>
+    <hr />
+    <hr />
+    <h2>모두 왼쪽정렬</h2>
+    <div class="container1">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모두 오른쪽 정렬</h2>
+    <div class="container2">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모두 중앙정렬</h2>
+    <div class="container3">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>요소간 동일간격 양끝에 반간격</h2>
+    <div class="container4">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>요소간, 양끝에 동일간격</h2>
+    <div class="container5">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>처음은 오른쪽끝, 마지막은 왼쪽끝</h2>
+    <div class="container6">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>
