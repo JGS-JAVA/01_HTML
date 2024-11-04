@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배너와 네비게이션</title>
+    <style>
+      /*보통 웹사이트 만들때 
+        바디에 여백제거용으로 margin:0; 주고 시작
+        div 로 설정시 생기는 여백제거*/
+      body {
+        margin: 0;
+      }
+      /*배너스타일*/
+      .banner {
+        background-color: yellowgreen;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      /*네비 스타일
+      ul 기본적으로 상하에 여백존재
+      카테고리나 네비게이션 설정시 
+      ul 태그에 작성된 여백 없애기
+      margin: 0; padding: 0;
+      a 태그는 inline 이라서 패딩 안됨
+      그래서 display:block 설정후 가로세로 패딩 준다*/
+      .nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        background-color: #333;
+        justify-content: space-around;
+      }
+      .nav a {
+        display: block;
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .nav a:hover {
+        background-color: #555;
+      }
+      /*블로그 섹션 스타일*/
+      .blog{
+        width: 8px;
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        /*          우측 하측 뿌옇게   검정색    불투명도 
+        붙투명도가 1에 가까울수록 짙어짐*/
+      }
+      .post{
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;}
+        h2{
+            color: yellowgreen;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        h3{
+            color: lightgreen;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #쿠키{
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <pre></pre>
+    <div class="banner">웹 사이트에 오신 것을 환영합니다.</div>
+    <ul class="nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">서비스</a></li>
+      <li><a href="#">연락하기</a></li>
+    </ul>
+
+    <!-- blog section
+     blog: web log
+     vlog: video log
+     log: 컴퓨터 기록일지에 문제발생 기록-->
+    <div class="blog">
+      <div class="post">
+        <h2>첫 블로그 포스트</h2>
+        <p>안녕 블로그 오픈함 관심부탁</p>
+      </div>
+      <div class="post">
+        <h2><span id="쿠키">&#x1f36a</span>쿠키 만들기 포스팅</h2>
+        <p>밀가루, 우유, 계란 반죽</p>
+        <p>설탕, 초콜릿 첨가</p>
+        <p>오븐 20분</p>
+      </div>
+      <div class="post">
+        <h3>개발 공부 : HTML 편</h3>
+        <p>doc : document type</p>
+        <p>html5 설정으로 ! 넣기</p>
+      </div>
+    </div>
+  </body>
+</html>

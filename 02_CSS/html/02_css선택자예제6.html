@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ul li 스타일 적용하기</title>
+    <style>
+      /*홀수는 배경색 #f9f9f9
+        짝수는 배경색 #e0e0e0
+        3의 배수는 글자색 빨간색, 폰트 굵게*/
+      li:nth-child(2n-1) {
+        background-color: #f9f9f9;
+      }
+      li:nth-child(2n) {
+        background-color: #e0e0e0;
+      }
+      li:nth-child(3n) {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ul li 스타일 적용하기</h1>
+    <pre></pre>
+    <ul>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+      <li>항목 4</li>
+      <li>항목 5</li>
+      <li>항목 6</li>
+      <li>항목 7</li>
+      <li>항목 8</li>
+      <li>항목 9</li>
+    </ul>
+    <hr />
+    <style>
+      p:nth-child(n + 1) :nth-child(-n + 3) p:nth-child(n + 4) {
+        color: blue;
+      }
+      /*4번째 부터 표기 다르게하기
+      1~3등까지는 
+      n= 0 
+      +n= n이후 
+      -n= n이전
+      */
+    </style>
+    <h1>선착순 3명에게 경품</h1>
+    <div>
+      <p>김말숙</p>
+      <p>홍길동</p>
+      <p>박길자</p>
+      <p>오명식</p>
+      <p>안정태</p>
+      <p>박규숙</p>
+      <p>오영실</p>
+      <p>이길명</p>
+      <p>하짐자</p>
+      <p>고명진</p>
+    </div>
+  </body>
+</html>
