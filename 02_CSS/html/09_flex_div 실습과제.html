@@ -14,26 +14,35 @@
         height: 1000px;
         background-color: #f0f0f0;
       }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
       .box {
         width: 100px;
         height: 100px;
-        background-color;
       }
+
       .box1 {
-        background-color: lightblue;
+        background-color: lightblue !important;
       }
       .box2 {
-        background-color: lightcoral;
+        background-color: lightcoral !important;
       }
       .box3 {
-        background-color: lightyellow;
+        background-color: lightyellow !important;
+        /*1순위
+        .container box 와 .box 는 동일한 css 표기
+        class 속성명을 두가지 이상 지정해서 작성하려면
+        <태그 class="속성명1 속성명2 속성명3 ... ">요소값</태그>
+        위처럼 띄어쓰기로 작성해 속성 여러개 적용*/
       }
     </style>
     <h1>FLEX BOX CONTAINER</h1>
     <div class="container">
-      <div class="box1">1</div>
-      <div class="box2">2</div>
-      <div class="box3">3</div>
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
     </div>
   </body>
 </html>
