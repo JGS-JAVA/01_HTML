@@ -1,0 +1,71 @@
+/*css의 경우 하나의 css파일에서 작업
+html 파일이나 div 로 묶은 css 스타일 변경될때마다
+주석으로 어떤 css 스타일인지 표기하기
+***********main page css************/
+
+.banner {
+  background-color: #8b4513;
+  color: white;
+  padding: 60px 0px 60px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  background-color: #3e2723;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.nav a:hover {
+  background-color: #5d4037;
+}
+/*메뉴 이외 소개 연락하기 섹션
+        섹션들의 공통스타일 몪어 디자인 적용*/
+.content {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap; /*모바일 화면 반응형*/
+  justify-content: center;
+  gap: 20px;
+}
+.menu-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.menu-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.menu-item span {
+  display: block;
+  /*가로세로 크기 조절할때 필요
+            em = em square
+            1em = 16px
+            화면에서 상대적 크기지정*/
+  font-size: 1.5em;
+  margin-right: 8px;
+}

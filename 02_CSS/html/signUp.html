@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/cafe.css" />
+    <style>
+      /******* signup.html ********/
+      .signup-container {
+        width: 400px;
+        margin: 50px auto;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .signup-container h2 {
+        text-align: center;
+      }
+      /*label 에서 프로필 사진 선택하기 라벨은
+        아래에 작성한 스타일로 덮어씌워짐
+        현재 label 은 프로필 사진 선택하기 스타일보다 상위에 있어서
+        프로필 사진 선택하기 디자인에 큰영향X*/
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #3e2723;
+      }
+      /*input 에서 특정 타입만 선택해서 꾸밀때*/
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--배너-->
+    <h1></h1>
+    <div class="banner">카페에 오신 것을 환영합니다. &#x2615;</div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">연락하기</a></li>
+        <li><a href="signUp.html">회원가입하기</a></li>
+      </ul>
+    </div>
+    <div class="signup-container">
+      <h2>회원가입</h2>
+      <!--for="id속성명"
+       for는 input 창 안누르고 라벨표기 눌러도 input 창에 커서 나타나게함
+       label 에서 사진선택할 대 for 사용-->
+      <form action="회원가입성공.html">
+        <label for="user-name">이름 : </label>
+        <input type="text" id="user-name" name="user-name" />
+        <br />
+        <label for="user-email">이메일 : </label>
+        <input type="email" id="user-email" name="user-email" />
+        <br />
+        <label for="user-pw">비밀번호 : </label>
+        <input type="password" id="user-pw" name="user-pw" />
+        <br /><br /><br /><br /><br />
+        <!--label for 사용 사례-->
+        <style>
+          /*class 속성명은 .속성명{}
+              id 속성명은 #속성명{}
+              display:none 위치까지 숨겨 정말 없는것처럼 보임
+              visibility:hidden 투명망토처럼 안보여도 위치는 차지함
+              프로필 사진 선택시 사진 보이게 하려면 자바스크립트로 설정*/
+          #user-profile {
+            display: none;
+            /*프로필 이미지 선택창 숨기기*/
+          }
+          /*태그이름[속성명="특정속성명"] {css 스타일 작성하기}*/
+          label[for="user-profile"] {
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          button {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          }
+          input[type="checkbox"],
+          input[type="radio"] {
+            margin-right: 10px;
+            margin-bottom: 15px;
+          }
+        </style>
+        <label for="user-profile">프로필 사진 선택하기</label>
+        <input type="file" id="user-profile" name="user-profile" />
+        <br /><br /><br /><br />
+        <!--취미 특기 체크박스
+        name 으로 같은 분류의 체크박스 묶기-->
+        <label>취미/특기</label>
+        <input type="checkbox" id="hobby" name="hobby" />음악
+        <input type="checkbox" id="hobby" name="hobby" />운동
+        <input type="checkbox" id="hobby" name="hobby" />독서
+        <input type="checkbox" id="hobby" name="hobby" />요리 <br /><br />
+        <label>수신동의 여부</label>
+        <br />
+        <input type="radio" name="subscription" />예
+        <input type="radio" name="subscription" />아니요 <br /><br />
+        <button>가입하기</button>
+      </form>
+    </div>
+  </body>
+</html>
