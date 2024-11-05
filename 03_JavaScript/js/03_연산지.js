@@ -28,5 +28,20 @@ function 더하기() {
 function 빼기() {
   const value1 = 숫자1.value;
   const value2 = 숫자2.value;
-  결과.innerText = value1 - value2;
+  결과.innerText = Number(value1) - Number(value2);
+}
+function 곱하기() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) * Number(value2);
+}
+function 나누기() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) / Number(value2);
+}
+function 나머지() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) % Number(value2);
 }
