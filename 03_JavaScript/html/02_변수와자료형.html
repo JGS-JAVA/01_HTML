@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수와자료형</title>
+  </head>
+  <body>
+    <h1>자바스크립트 변수 Variable</h1>
+    <pre>
+        메모리에 값을 바꿔가며 저장하는 공간
+        변수이름 붙이고 값대입시 필요한곳에서 
+        변수명호출해 저장값사용
+    </pre>
+    <h3>변수명 규칙</h3>
+    <pre>
+        의미있게 작성, 대소문자 구분, 특수문자는 _ 만 가능(첫글자 제외)
+        숫자(첫글자 제외)
+        카멜표기법(변수명 작성시 띄어쓰기불가해서 가독성 높이기 위함)
+        https://www.curioustore.com 에서 변수명 작명 도움받기
+    </pre>
+    <hr />
+    <h3>javascript 변수종류와 특징</h3>
+    <pre>
+        변수명 새로 만들어 변수 담을 공간 생성
+        새로 만들때 
+        new 바구나A = '물건이나 숫자가 담겼다';
+        var 바구니A = '물건이나 숫자가 담겼다';
+        var: 변수, 변수명 중복가능(덮어쓰기 가능)
+        덮어쓰기나 문제발생해서 변수명 중복 안되도록 let 사용.
+        let: 변수, 변수명 중복불가
+        const: 상수, 변수명 중복불가. 값 변경 불가. 
+        변수: var, let
+        상수: const (최신, 가장 많이씀)
+
+        1순위 : const(js는 특정요소 선택사용을 많이해 변수에 고정해둠)
+        2순위 : let
+        2순위 : var
+    </pre>
+    <hr />
+    <h1>자바스크립트 자료형</h1>
+    <pre>
+        자바스크립트는 변수선언시 별도 자료형 지정 안함
+        변수에 대입되는 값(리터럴)에 의해 자료형 결정
+        숫자는 '' "" 없이 표기가능
+        문자열 '' "" 로 감싸기
+        true false '' "" 없이 표기가능
+        function 함수, 기능
+        undefined 정의되지 않은 변수. 변수 선안만 하고 값대입 안함
+        null 참조할게 없음
+        document.getElementById("오타")
+        id 가 일치하는 요소 없어서 참조할 수 없다
+    </pre>
+  </body>
+</html>
