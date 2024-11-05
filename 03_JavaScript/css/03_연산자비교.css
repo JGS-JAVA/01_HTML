@@ -11,6 +11,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
 }
 input {
   width: 50%;
@@ -19,4 +20,9 @@ input {
 }
 label {
   font-size: 20px;
+}
+span {
+  margin: 20px;
+  font-size: 30px;
+  color: blue;
 }
