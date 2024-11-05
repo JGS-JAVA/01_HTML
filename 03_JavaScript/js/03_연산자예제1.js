@@ -12,8 +12,8 @@ const value3 = number3.value3; //0
 
 console.log("plus 기능 들어오기 전");
 console.log("값1:" + value1);
-console.log("값2:" + value1);
-console.log("값3:" + value1);
+console.log("값2:" + value2);
+console.log("값3:" + value3);
 
 function plus() {
   const value1 = number1.value1; //plus() 버튼 누르면 입력한 값 가져오기
@@ -24,8 +24,8 @@ function plus() {
 
 console.log("plus 기능 들어온 후");
 console.log("값1:" + value1);
-console.log("값2:" + value1);
-console.log("값3:" + value1);
+console.log("값2:" + value2);
+console.log("값3:" + value3);
 
 function multi() {
   const value1 = number1.value1;
@@ -36,8 +36,8 @@ function multi() {
 
 console.log("multi 기능 들어온 후");
 console.log("값1:" * value1);
-console.log("값2:" * value1);
-console.log("값3:" * value1);
+console.log("값2:" * value2);
+console.log("값3:" * value3);
 /*value1,2,3 값 기능 바깥에 작성하면 안됨
 plus, multi 기능 시작전에 작성되면 안에 있는 모든 값은 현재 0 이다
 plus 버튼 누르면 input 안의 값 새로 가져오기 실행
