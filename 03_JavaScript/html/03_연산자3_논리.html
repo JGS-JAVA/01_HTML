@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>논리연산자(&&, ||, !)</title>
+  </head>
+  <body>
+    <h1>논리연산자</h1>
+    <pre>
+        and 영산자 (a && b)
+        a,b 모두 참이면 결과로 참 반환, 나머지는 거짓
+        a = 조건1
+        b = 조건2
+        a 와 b 가 모두 참이면 참 반환
+
+        회원가입 때 작성값과 로그인 때 작성값 비교
+        a = 아이디 일치?
+        b = 비번 일치?
+    </pre>
+    <hr />
+    <h3>로그인하기</h3>
+    <pre>
+        회원가입 때 아이디: member01
+        회원가입 때 비번: pass01
+        아이디와 비번 일치시 alert("로그인 성공")
+        아이디와 비번 불일치시 alert("로그인 실패")
+
+    </pre>
+    <style>
+      #msg {
+        color: red;
+        display: none; /*초기에 숨기기*/
+      }
+    </style>
+    <div>
+      ID : <input type="text" id="inputId" /> <br />
+      PW : <input type="text" id="inputPw" /> <br />
+      <button onclick="login()">로그인</button>
+    </div>
+    <h3>OR 연산자 (||)</h3>
+    <pre>
+      둘 중 하나만 참이어도 참 반환
+      a = 폰번 작성유무
+      b = 전번 작성유무
+    </pre>
+    <div>
+      <h4>전번 입력</h4>
+      폰번 : <input type="text" id="phone" />
+      <br />
+      전번 :
+      <input type="text" id="tel" />
+      <br />
+      <button onclick="checkNumber()">확인</button>
+      <p id="msg">전번이나 폰번 입력하기</p>
+    </div>
+    <script src="../js/03_연산자3_논리.js"></script>
+  </body>
+</html>
