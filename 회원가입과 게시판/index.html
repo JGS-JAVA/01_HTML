@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      #hint {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    required : form 태그에서 많이쓴다
+    form 태그 안 button 태그는 action 태그의 주소로 이동
+    input 값 미작성시 action 태그의 주소로 이동 못하게 required 로 막는다
+    -->
+    <h1>회원가입</h1>
+    <form action="회원가입성공.html">
+      <label>아이디</label>
+      <input type="text" id="user-id" required />
+      <br />
+      <label>비번</label>
+      <input
+        type="password"
+        id="user-pw"
+        required
+        onfocus="힌트()"
+        onblur="힌트숨기기()"
+      />
+      <p id="hint">영문 대/소문, 특수문, 숫자 포함</p>
+      <br />
+      <button>회원가입</button>
+    </form>
+    <script>
+      const h = document.getElementById("hint");
+      function 힌트() {
+        h.style.display = "block"; //보려할때 onfocus
+      }
+      function 힌트숨기기() {
+        h.style.display = "none"; //가릴때 onblur
+      }
+      /*
+      onclick : 버튼, 링크, 이미지 등 클릭가능요소에 사용
+      <button onclick = "기능명(--------)"> 버튼 태그 안에 기능넣기 금지
+      <button onclick = "기능명()"> 기능명 다음에 비워두기
+        <script> 에서 function 으로 기능쓰기
+            function 기능명( ) {
+                alert("클릭됨")
+            }
+
+
+        onfocus : 입력필드를 선택/ 호버시 발생
+                  input, textarea 에서 많아씀
+        onblur : 입력필드 벗어날 때 발생
+
+
+        */
+    </script>
+  </body>
+</html>
