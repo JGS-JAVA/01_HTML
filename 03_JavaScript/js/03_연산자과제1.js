@@ -43,4 +43,4 @@ result.innerText = comp + "\n"
 +"곱하기 결과 : " + mul + "\n"
 +"빼기 결과 : " + sub;
 }
-*/
+\n 은 줄바꾸는 엔터역할*/
