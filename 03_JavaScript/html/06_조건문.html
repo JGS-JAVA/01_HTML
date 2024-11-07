@@ -6,6 +6,43 @@
     <title>조건문</title>
   </head>
   <body>
-    <h1></h1>
+    <h1>조건문 (Condition)</h1>
+    <pre>
+      Condition = 어떤 조건(상태)에 따라 다르게 동작
+      조건 true 면 작업수행
+      코드 해석순서 제어하는 제어문의 종류로
+      조건식에 따라 수행되는 코드변경구문
+    </pre>
+    <h3>if(만약에)</h3>
+    <pre>
+      <code>
+        if (조건식) {
+          조건식이 true 이면 실행할 코드;
+
+        }
+      </code>
+      *조건식: true, false 인 식(연산)
+      *조건문: 조건결과에 따라 실행을 제어하는 문장 (if, switch)
+    </pre>
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input1" />
+    <button onclick="check1()">양수인지 검사하기</button>
+    <hr />
+    <h3>if(만약에) - else (아니면) 문</h3>
+    <pre>
+      <code>
+        if(조건식) {
+          조건식이 true 이면 실행할 코드;
+        }
+        else {
+          조건식이 false 이면 실행할 코드;
+        }
+      </code>
+
+      if-else : 수행할 구문 많을때
+      삼항연산자: 수행할 구문 적을때
+      else 에 조건식 작성X
+    </pre>
+    <script src="../js/06_조건문.js"></script>
   </body>
 </html>
