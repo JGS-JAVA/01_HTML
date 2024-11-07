@@ -12,8 +12,11 @@ function checkSeason() {
   } else if (9 <= month && month <= 11) {
     msg.innerText += "가을이다";
     msg.className = "가을";
-  } else {
+  } else if (month == 12 || month == 1 || month == 2) {
     msg.innerText += "겨울이다";
     msg.className = "겨울";
+  } else {
+    msg.innerText += "입력 오류";
+    msg.className = "";
   }
 }
