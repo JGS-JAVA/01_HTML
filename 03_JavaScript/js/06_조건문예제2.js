@@ -1,4 +1,4 @@
-function checkAge() {
+function checkScore() {
   const score = document.getElementById("score").value;
   const msg = document.getElementById("scoreMsg");
 
