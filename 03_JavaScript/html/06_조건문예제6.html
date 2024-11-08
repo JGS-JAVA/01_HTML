@@ -59,20 +59,15 @@
     <h1></h1>
     <pre></pre>
     <script>
-      /*잔액
-       */
-
       const output = document.getElementById("output"); //잔액
       const amount = document.getElementById("amount"); //입출금액
       let balance = 10000; //let 은 변수
+      output >= 0;
       output.innerText = balance; //초기금액 10000원 설정
 
       function 출금기능() {
         balance -= Number(amount.value); //Number 로 감싸기
-        output.innerText = balance; //input 에 작성한 금액을 balance 에 뺀다
-        if (amount.value == 0) {
-          alert("금액을 입력해요");
-        }
+        output.innerText = balance; //input 에 작성한 금액을 balance 에서 뺀다
       }
 
       function 입금기능() {
