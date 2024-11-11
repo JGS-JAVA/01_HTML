@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나이 조회</title>
+  </head>
+  <body>
+    <h1>나이 확인</h1>
+    <input type="number" id="inputAge" placeholder="나이 입력" />
+    <button onclick="checkAge()">확인</button>
+    <p id="result"></p>
+    <script>
+      /* 나이 확인버튼 누르면
+      1차 if문 -> 18, 13세 나이 확인
+      2차 if문 -> 18세 이상 성인
+                  13세 이상 청소년 제한가능
+                  나머지 어린이 보호자 동의
+      else문으로 나이 미기입시 입력요구 p 태그에 표시 */
+      function checkAge() {
+        const age = document.getElementById("inputAge").value;
+        const result = document.getElementById("result");
+        if (age) {
+          if (age >= 18) {
+            result.innerText = "성인";
+          } else if (age >= 13) {
+            result.innerText = "청소년";
+          }
+        } else {
+          result.innerText = "어린이";
+        }
+      }
+    </script>
+  </body>
+</html>

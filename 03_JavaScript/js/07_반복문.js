@@ -47,3 +47,52 @@ function check4() {
   }
   alert("최종출력수는 " + 결과);
 }
+/*while 구조
+while(조건식){
+반복할 코드
+     }
+*/
+function while1() {
+  let abc = 1;
+  while (abc <= 5) {
+    alert(abc);
+    abc++; //abc = abc + 1;
+  }
+}
+
+function while2() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("while2 버튼====== " + abc);
+    console.log("abc: " + abc);
+    abc++;
+  }
+}
+function while3() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("while3 버튼====== " + abc);
+    console.log("abc: " + abc);
+    abc++;
+  } if(abc == 5){
+    break;
+  }
+}
+function while4(){
+
+  let xyz = 0;
+  while(xyz <= 20){
+    console.log(xyz);
+    xyz++;
+  }
+}
+function while5(){
+
+  let xyz = 5;
+  while(xyz <= 20){
+    console.log(xyz);
+    xyz++;
+  } if(xyz == 15){
+    break;
+  }
+}
