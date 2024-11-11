@@ -50,14 +50,21 @@
       <h1>카페 메뉴</h1>
       <p>메뉴 선택</p>
       <ul>
-        <li>1. 아메리카노</li>
-        <li>2. 카페라떼</li>
-        <li>3. 프라푸치노</li>
+        <li>1. 아메리카노 4000</li>
+        <li>2. 카페라떼 8000</li>
+        <li>3. 프라푸치노 9000</li>
       </ul>
       <button onclick="selectMenu()">주문하기</button>
       <p id="result"></p>
     </div>
 
+    <h1>카페 메뉴 계산하기</h1>
+    <div>
+      <button onclick="선택('아메리카노')">아메리카노 (&#8361; 4000)</button>
+      <button onclick="선택('카페라떼')">카페라떼 (&#8361; 8000)</button>
+      <button onclick="선택('프라푸치노')">프라푸치노 (&#8361; 9000)</button>
+      <h2 id="price"></h2>
+    </div>
     <script src="../js/09_분기문예제1.js"></script>
   </body>
 </html>

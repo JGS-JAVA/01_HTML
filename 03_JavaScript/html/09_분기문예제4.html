@@ -4,6 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>분기문 파라미터 매개변수 활요앟기</title>
+    <style>
+      button {
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+      button:hover {
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>버튼을 활용한 과일 주문하기</h1>
+    <div>
+      <button onclick="선택('apple')">사과 (&#8361; 2000)</button>
+      <button onclick="선택('grape')">포도 (&#8361; 5000)</button>
+      <button onclick="선택('kiwi')">키위 (&#8361; 3000)</button>
+      <h2 id="price"></h2>
+    </div>
+    <script>
+      /*function 선택과 스위치 괄호안 같고,
+      버튼 onclick 선택과 케이스 괄호안 같다
+      버튼클릭은 입력오류가 없어 디폴트 없음
+      */
+      let fruitPrice = 0;
+      function 선택(abc) {
+        const price = document.getElementById("price");
+        switch (abc) {
+          case "apple":
+            fruitPrice += 2000;
+            break;
+          case "grape":
+            fruitPrice += 5000;
+            break;
+          case "kiwi":
+            fruitPrice += 3000;
+            break;
+        }
+        price.innerText = fruitPrice;
+        /* innerText 마지막에 한번만 작성.
+         버튼 누르면 총금액 출력*/
+      }
+    </script>
+  </body>
 </html>

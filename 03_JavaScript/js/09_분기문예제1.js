@@ -28,3 +28,23 @@ function selectMenu() {
     }
   }
 }
+function totalPrice() {
+  let coffeePrice = 0;
+  function 선택(abc) {
+    const price = document.getElementById("price");
+    switch (abc) {
+      case "아메리카노":
+        coffeePrice += 2000;
+        break;
+      case "카페라떼":
+        coffeePrice += 5000;
+        break;
+      case "프라푸치노":
+        coffeePrice += 3000;
+        break;
+    }
+    price.innerText = coffeePrice;
+  }
+}
+/* innerText 마지막에 한번만 작성.
+   버튼 누르면 총금액 출력*/
