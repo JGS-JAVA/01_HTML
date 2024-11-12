@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>return 으로 전달인자, 매개변수 표현</title>
+    <link rel="stylesheet" href="../css/10_함수_리턴_예제1.css" />
+  </head>
+  <body>
+    <h1>차량 구매</h1>
+    <button onclick="차구매('소나타')">소나타 구매하기</button>
+    <button onclick="차구매('아반떼')">아반떼 구매하기</button>
+    <button onclick="차구매('제네시스')">제네시스 구매하기</button>
+    <h3 id="result"></h3>
+    <script>
+      /*
+        함수 위치나 순서는 자유롭다
+        const, let 은 순서중요함
+        script 맨 위에 const, let을 적는게 좋다
+        */
+      function 차가격(model) {
+        if (model === "소나타") {
+          return 1000;
+        } else if (model === "아반떼") {
+          return 1100;
+        } else if (model === "제네시스") {
+          return 1200;
+        }
+      }
+
+      function 차구매(model) {
+        const price = 차가격(model);
+        document.getElementById("result").innerText =
+          model + "구매완료. 가격은" + price + "이다";
+      }
+    </script>
+  </body>
+</html>

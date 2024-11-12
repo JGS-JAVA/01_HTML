@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>분기문예제5</title>
+  </head>
+  <body>
+    <h1>switch case 문 활용해서 글자 표현하기</h1>
+    <button onclick="선택('콜라')">1. 코카콜라 (500원)</button>
+    <button onclick="선택('환타')">2. 환타 (600원)</button>
+    <button onclick="선택('소다')">3. 사이다 (700원)</button>
+    <h2 id="total">총 금액: 0원</h2>
+    <script>
+      let totalPrice = 0; //초기금
+      function 선택(음료) {
+        //파라미터 매개변수
+        switch (음료) {
+          case "콜라":
+            totalPrice += 500;
+            break;
+          case "환타":
+            totalPrice += 600;
+            break;
+          case "소다":
+            totalPrice += 700;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
