@@ -8,5 +8,37 @@
   <body>
     <h1>이름 속성 활용해 checkbox radio 활용</h1>
     <pre></pre>
+    <input type="checkbox" name="hobby" id="music" value="음악감상" />
+    <label for="music">음악감상</label>
+    <input type="checkbox" name="hobby" id="sports" value="운동" />
+    <label for="sports">운동</label>
+    <input type="checkbox" name="hobby" id="book" value="독서" />
+    <label for="book">독서</label>
+    <input type="checkbox" name="hobby" id="trip" value="여행" />
+    <label for="trip">여행</label>
+    <button onclick="checkHobby()">확인</button>
+    <p id="result"></p>
+    <script>
+      function checkHobby() {
+        const hobbyList = document.getElementsByName("hohhy");
+        let str = ""; // 체크된 값 누적
+        let count = 0; // 체크된 수 총 계산 카운트
+
+        for (let i = 0; i < hobbyList.length; i++) {
+          if (hobbyList[i].checked) {
+            // 체크된게 존재하면
+            str += hobbyList[i].value + " ";
+            count++; // true 면 숫자 더해짐
+          }
+        }
+        const inText = `${str} <br> 선택된 취미 개수 : ${count}`;
+        const result = document.getElementById("result");
+        if (count > 0) {
+          result.innerHTML = inText;
+        } else {
+          result.innerHTML = "선택한게 없음";
+        }
+      }
+    </script>
   </body>
 </html>
