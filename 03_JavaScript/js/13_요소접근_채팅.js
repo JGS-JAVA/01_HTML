@@ -18,6 +18,15 @@ inputChat.value.      입력값
 .length  글자수
 == 0     0일때
 if 문 안에 return 써서 if 문 나가서 돌려보냄
+input 아이디값이 user-input 인 요소에서
+키보드 작동이 감지될시 
+올라온 키가 'Enter' 키면 readValue()함수 불러오기
+
+keydown : 키 눌러질 때
+keypress : 키 눌러진 상태
+keyup : 눌러진 키 다시 올라올 때
+
+addEventListener 로 keyup 이벤트 확인, 그 외 다양한 이벤트 존재
 */
 
 function readValue() {
@@ -32,4 +41,9 @@ function readValue() {
 
   bg.scrollTop = bg.scrollHeight;
   inputChat.value = " ";
+}
+function 키누르기(event) {
+  if (event.key === "Enter") {
+    readValue();
+  }
 }
