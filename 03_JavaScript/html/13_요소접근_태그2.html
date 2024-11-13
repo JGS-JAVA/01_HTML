@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>태그 중 body 태그 확인</title>
+  </head>
+  <!--
+  자바스크립트는 getElementsByTagName
+  elements 복수형 배열형태라 몇번째인지 [ ] 로 적어야함
+  [body, ... ]
+  body 같은 태그는 tagname 없이 태그명 변경가능
+css 는 마지막 것으로 덮어쓰기됨
+  -->
+  <body>
+    <h1>body 태그 배경색 변경</h1>
+    <button onclick="bdBtn()">body Button</button>
+    <script>
+      function bdBtn() {
+        const bd = document.getElementsByTagName("body")[0];
+        bd.style.backgroundColor = "lightblue";
+        document.body.style.backgroundColor = "orange";
+      }
+    </script>
+  </body>
+</html>

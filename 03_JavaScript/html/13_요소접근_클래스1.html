@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스로 요소접근</title>
+    <link rel="stylesheet" href="../css/13_요소접근_클래스1.css" />
+  </head>
+  <body>
+    <h1>클래스로 요소접근</h1>
+    <h3>클래스로 요소(DOM)접근</h3>
+    <pre>
+        js dom 객체 = html 요소접근
+        
+    </pre>
+    <button onclick="clsTest()">배경색 변경</button>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <hr />
+    <button onclick="clsSpn()">스판 배경색 변경</button>
+    <br />
+    <span class="spn">1</span>
+    <span class="spn">2</span>
+    <span class="spn">3</span>
+    <span class="spn">4</span>
+    <span class="spn">5</span>
+
+    <!--
+    nodelist 는 유사배열
+index, length 는 있고 배열전용기능(메서드) 는 없다
+index = [ ] 0~length-1번째까지 자동으로 번호 매기기
+length = [ ] 안에 값이 몇개 있는지 1부터 객수 세기
+유사배열(= HTMLCollection = HTML 묶음)
+
+1. divs = cls 중에서 0번째 작성된 div 요소 배경색 변경
+for 문 안에 변수명.length 사용시 <= 아니고 < 이다
+index 는 0 부터 시작해야함
+let i = 0 부터 시작해야함
+inline 태그는 너비와 높이가 없어서 데이터 작성해야 색 나온다
+-->
+
+    <script src="../js/13_요소접근_클래스1.js"></script>
+  </body>
+</html>

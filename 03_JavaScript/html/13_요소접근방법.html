@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 접근방법</title>
+  </head>
+  <body>
+    <h1>DOM Document Object Model</h1>
+    <pre>
+        웹 문서 모든요소를 객체로 표현
+        html요소 == js객체
+        문서내 특정요소 접근가능
+        요소(객체)에 속성값 세팅, 얻기
+        
+        document.getElementById("아이디값");
+        document = html 코드(문서)    
+        . =  html 코드 문서 내에서 
+        getElementById = 요소들 중에서 원하는 Id 값 가져오기
+    </pre>
+    <hr />
+    <h1>DOM 으로 요소 접근</h1>
+    <pre>
+        객체
+        손님 객
+        몸 체
+        
+        1. id 로 접근하기 : document.getElementById("id속성값");
+        -> id 로 요소(객체) 하나 가져옴
+
+        id 빼고 모두 뒤에 Name 붙이기 (css 제외)
+
+        2. class 로 접근 : document.getElementsByClassName("class속성값");
+        -> class 로 요소 단체(elements 복수형)로 가져와 배열 형태로 변환
+
+        3. name 로 접근 : document.getElementsByName("name속성값");
+        -> name 로 요소 단체(elements 복수형)로 가져와 배열(nodelist, 유사배열) 로 변환
+
+        4. tag 로 접근 : document.getElementsByTagName("tag 명");
+        -> tag 로 요소 단체(elements 복수형)로 가져와 배열 형태로 변환
+
+        5. css 선택자로 접근 : 
+        document.querySelector("css 선택자");
+        -> 선택자가 선택한 요소 중 첫번째 요소 반환
+        document.querySelectorAll("css 선택자");
+        -> 선택 요소 모두 배열형태(nodelist, 유사배열) 로 반환
+
+        nodelist, 유사배열
+        유사배열은 진짜배열 아님. map, filter 같은 배열기능 불가. 대신 forEach문으로 접근가능
+
+
+    </pre>
+  </body>
+</html>
