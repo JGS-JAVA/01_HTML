@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio input 선택 확인</title>
+    <link rel="stylesheet" href="../css/13_요소접근_이름3.css" />
+  </head>
+  <!--
+  required : name으로 같은 이름그룹에 묶인 radio 중 하나도 선택 안하면 못넘어감
+            input 하나만 required 써도 이름그룹 전체에 적용됨
+  checked : 강제로 처음부터 같은 부류 name에서 값 하나 선택해놓게 설정
+  radio 는 하나만 선택해서 for문 불필요
+  checkbox 는 for문 필요
+  input 에서 특정이름 가진 속성에서 checked 로 선택된 스타일 가져오기
+  input[name="색상"]: checked for 이름으로
+  input 과 label 이 연결된 값에 색 칠한다
+  + 는 바로 뒤 형제요소 하나만 선택해서 작성
+
+  형제1 + 형제2 {
+      css 코드
+  }
+  -->
+  <body>
+    <h1>좋아하는 색생 선택</h1>
+    <div class="container">
+      <input type="radio" name="색상" id="red" value="빨강" required />
+      <label for="red">빨강</label>
+      <input type="radio" name="색상" id="green" value="초록" />
+      <label for="green">초록</label>
+      <input type="radio" name="색상" id="blue" value="파랑" />
+      <label for="blue">파랑</label>
+      <input type="radio" name="색상" id="yellow" value="노랑" />
+      <label for="yellow">노랑</label>
+    </div>
+    <button onclick="checkColor()">색상 선택</button>
+    <p id="result"></p>
+    <script>
+      function checkColor() {
+        const selectColor = document.querySelector(
+          'input[name="색상"]:checked'
+        );
+        if (selectColor) {
+          document.getElementById("result").innerText = selectColor.value;
+        }
+      }
+    </script>
+  </body>
+</html>
