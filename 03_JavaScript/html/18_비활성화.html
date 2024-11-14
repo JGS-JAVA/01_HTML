@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비활성화</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        background-color: red;
+        color: white;
+      }
+      button:disabled {
+        background-color: gainsboro;
+        cursor: not not-allowed; /*선택 금지 아이콘*/
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton" disabled>클릭해요</button>
+    <br />
+    <button onclick="활성화()">버튼 활성화</button>
+    <button onclick="비활성화()">버튼 비활성화</button>
+    <script>
+      function 활성화() {
+        document.getElementById("myButton").disabled = false; /*선택 금지 해금*/
+      }
+      function 비활성화() {
+        document.getElementById("myButton").disabled = true;
+      }
+    </script>
+  </body>
+</html>
