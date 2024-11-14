@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/15_정규표현식_회원가입.css" />
+  </head>
+  <body>
+    <form>
+      <h1>행복나라 회원가입</h1>
+
+      아이디:
+      <input type="text" id="userId" onfocus="힌트()" onblur="힌트숨기기()" />
+
+      <button onclick="checkId()">아이디확인</button>
+      <p id="idResult"></p>
+
+      비밀번호: <input type="password" id="userPw" />
+      <button onclick="checkPw()">비번확인</button>
+      <p id="pwResult"></p>
+
+      비밀번호: <input type="password" id="pwConfirm" />
+      <button onclick="confirmPw()">비번일치확인</button>
+      <p id="pwConfirmResult"></p>
+
+      이름: <input type="text" id="name" />
+      <button onclick="checkName()">이름확인</button>
+      <p id="nameResult"></p>
+
+      성별: 남자<input type="radio" name="gender" /> 여자<input
+        type="radio"
+        name="gender"
+      />
+      <script>
+        function checkId() {
+          const userId = document.getElementById("userId").value;
+          const idResult = document.getElementById("idResult");
+          const idRegex = /^[a-zA-Z0-9_-]{6,16}$/;
+
+          if (idRegex.test(userId)) {
+            idResult.innerText = "유효한 형식의 아이디";
+            idResult.className = "good";
+          } else {
+            idResult.innerText = "유효하지 않은 형식의 아이디";
+            idResult.className = "bad";
+          }
+        }
+        function checkPw() {
+          const userPw = document.getElementById("userPw").value;
+          const pwResult = document.getElementById("pwResult");
+          const pwRegex =
+            /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+
+          if (idRegex.test(userPw)) {
+            pwResult.innerText = "유효한 형식의 비번";
+            pwResult.className = "good";
+          } else {
+            pwResult.innerText = "유효하지 않은 형식의 비번";
+            pwResult.className = "bad";
+          }
+        }
+        function confirmPw() {
+          const userPw = document.getElementById("userPw").value;
+          const pwConfirm = document.getElementById("pwConfirm").value;
+          const pwConfirmResult = document.getElementById("pwConfirmResult");
+
+          if (pwConfirm === userPw) {
+            pwConfirmResult.innerText = "비번 일치";
+          } else {
+            pwConfirmResult.innerText = "비번 불일치";
+          }
+        }
+      </script>
+    </form>
+  </body>
+</html>
