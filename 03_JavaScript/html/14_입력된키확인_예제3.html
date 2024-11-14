@@ -31,6 +31,20 @@
     event.key.toLowerCase() -> 영문 대문자 입력시 소문자로 바궈서 일치시킨다
     스위치는 배경색 변경진행중인 코드
     스위치 밖에 아래에 결과확인 코드 적기
+    일정시간 후 다시 흰색으로 바뀌는 스크립트 하기
+    setTimeout 자바스크립트에서 만든 기능. 일정시간 종료후 특정기능 수행
+    구버전
+    setTimeout(함수명, 몇초, idx번호);
+    기능 진행시 몇초후에 될지 설정, idx번호에 전달인자 들어간다
+    신버전
+    setTimeout(함수, 지연시간); 
+    코드단축해 편하게 함
+
+    setTimeout( () => {기능 설정 코딩} , 지연시간);
+
+    키 타겟 밸류 이벤트 익명함수...
+
+    신버전으로 일정시간후 색 돌아오기
     -->
     <script>
       const keys = document.querySelectorAll(".key");
@@ -54,6 +68,10 @@
             return;
         }
         keys[idx].style.backgroundColor = "lightblue"; //스위치 끝난 결과확인
+        /*setTimeout(색상되돌리기, 200, idx); //200 = 2초*/
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+        }, 200);
       }
 
       function keyUp(event) {
@@ -74,6 +92,10 @@
           default:
             return;
         }
+        keys[idx].style.backgroundColor = "white"; //스위치 끝난 결과확인
+      }
+
+      function 색상되돌리기(idx) {
         keys[idx].style.backgroundColor = "white"; //스위치 끝난 결과확인
       }
     </script>

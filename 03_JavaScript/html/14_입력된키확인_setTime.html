@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된키확인</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeydown="keyDown(event)" onkeyup="keyUp(event)">
+    <h1></h1>
+    <pre></pre>
+    <div class="container">
+      <div class="key-Box">
+        <div class="key">A</div>
+        <div class="key">B</div>
+        <div class="key">C</div>
+        <div class="key">D</div>
+        <div class="key">E</div>
+      </div>
+    </div>
+    <!-- 
+    문자열.toLowerCase(): 소문자로
+     문자열.toUpperCase(): 대문자로
+
+     익명함수 : function(){}
+      1. 기본형 : ( ) => { }
+      2. 매개변수 1개 : (e) => { } 또는 e => { }
+      3. 매개변수 n개 : (x,y,z) => { } 소괄호 생략불가 
+     -->
+    <script>
+      const keys = document.querySelectorAll(".key");
+
+      function keyDown(event) {
+        let idx;
+        switch (event.key.toUpperCase()) {
+          case "A":
+            idx = 0;
+            break;
+          case "B":
+            idx = 1;
+            break;
+          case "C":
+            idx = 2;
+            break;
+          case "D":
+            idx = 3;
+            break;
+          case "E":
+            idx = 4;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "#2a9d8f";
+        keys[idx].style.Color = "#white"; //스위치 끝난 결과확인
+        /*setTimeout(색상되돌리기, 200, idx); //200 = 2초*/
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+          keys[idx].style.Color = "#333";
+        }, 300);
+      }
+    </script>
+  </body>
+</html>
