@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된키확인</title>
+    <style>
+      #inputBox {
+        width: 300;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <!--
+  web log = blog
+  video log = vlog
+  console.log = 개발자가 값 확인하는 기록 창
+  "키누르기(event)" 에서 event 이름 바꾸기 금지
+
+         1. onkeydown : 누를 때
+         2. onkeypress :누르는 동안
+         3. onkeyup :뗄 때
+
+          태그 이름이 input 이라서 어떤 값이 들어오는건 인지하지만
+          어떤 값이 들어올지 컴퓨터가 몰라서 
+          이벤트명="기능명(event)" <- event 이름 바꾸기 금지
+  -->
+  <body>
+    <h1>키 입력 이벤트 예제</h1>
+    <pre>
+        아래 입력창에서 키 누르거나 떼보기
+
+    </pre>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="키 눌러보기"
+      onkeydown="키누르기(event)"
+      onkeyup="누르기끝(event)"
+    />
+    <script>
+      function 키누르기(event) {
+        console.log("키 눌림");
+      }
+      function 누르기끝(event) {
+        console.log("키 올라옴");
+      }
+    </script>
+  </body>
+</html>

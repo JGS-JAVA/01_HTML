@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q W E R 로 입력된 키 확인</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
+    <h1></h1>
+    <div class="container">
+      <div class="key-Box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+    <!--
+    키 입력마다 글자 배경색 변경
+    body 태그 내 모든 태그에 키업 적용
+    onclick onkeyup onkeydown ... 같은 이벤트는 
+    button input 외에도 다른 태그에 사용가능
+    
+    화면 내 모든 key 가져오기
+    document.querySelector('.key'); -> 첫째 .key 요소만 선택
+    document.querySelectorAll('.key'); -> 모든 클래스 이름으로 .key 요소 모두 선택
+    let 은 변수
+    idx 번호와 일치하는 keys 배열 요소 배경색 변경하기
+    
+    event.key.toLowerCase() -> 영문 대문자 입력시 소문자로 바궈서 일치시킨다
+    스위치는 배경색 변경진행중인 코드
+    스위치 밖에 아래에 결과확인 코드 적기
+    -->
+    <script>
+      const keys = document.querySelectorAll(".key");
+
+      function keyDown(event) {
+        let idx;
+        switch (event.key.toLowerCase()) {
+          case "q":
+            idx = 0;
+            break;
+          case "w":
+            idx = 1;
+            break;
+          case "e":
+            idx = 2;
+            break;
+          case "r":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "lightblue"; //스위치 끝난 결과확인
+      }
+
+      function keyUp(event) {
+        let idx;
+        switch (event.key.toLowerCase()) {
+          case "q":
+            idx = 0;
+            break;
+          case "w":
+            idx = 1;
+            break;
+          case "e":
+            idx = 2;
+            break;
+          case "r":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "white"; //스위치 끝난 결과확인
+      }
+    </script>
+  </body>
+</html>

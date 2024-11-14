@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된키확인 Enter</title>
+    <!--
+    엔터 입력시 메세지 보일 공간 div 로 만들기
+    키 다운 기능 :
+    키 업 기능 :
+    = 덮어쓰기
+    += 이어붙이기
+    innerText
+    innerHTML
+    `문자열 ${변수명} ` : 안에 변수명과 문자열 혼용 표기가능
+    "문자열" + 변수명 : 안에 변수명과 문자열 혼용 표기가능
+    -->
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+      }
+      #msg {
+        font-size: 20px;
+        color: orange;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter 키입력시 값 출력</h1>
+    <pre>입력창에서 엔터 누르기</pre>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="엔터 누르기"
+      onkeydown="handleKeyDown(event)"
+      onkeyup="handleKeyUp(event)"
+    />
+    <div id="msg"></div>
+    <script>
+      function handleKeyDown(event) {
+        console.log("개발자 확인창에서 키입력 확인");
+      }
+
+      function handleKeyUp(event) {
+        console.log("개발자 확인창에서 키종료 확인");
+        if (event.key === "Enter") {
+          document.getElementById("msg").innerHTML += "안녕<br>";
+          document.getElementById("msg").innerHTML += `안녕<br>`;
+        }
+      }
+    </script>
+  </body>
+</html>
