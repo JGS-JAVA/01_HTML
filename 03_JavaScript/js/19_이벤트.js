@@ -34,3 +34,12 @@ function 제출(e) {
   }
   alert("가입 완료");
 }
+
+const divBtn = document.getElementById("divBtn");
+/*이벤트모델 작성법
+요소.addEventListener("이벤트종류", 이벤트 핸들러(함수));
+
+*/ //클릭시 기능발휘
+divBtn.addEventListener("click", function () {
+  alert("클릭됨");
+});
