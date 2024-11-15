@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이메일 유효성 검사</title>
+    <style>
+      #error-msg,
+      #error-msg2 {
+        color: red;
+        font-size: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>정규표현식 활용해 이메일값 잘들어왔나 확인</h1>
+    <input type="text" id="user-email" placeholder="이메일 입력하기" />
+    <button onclick="checkEmail()">확인</button>
+    <p id="error-msg">유효하지 않음</p>
+    <hr />
+    <h2>핸드폰 번호에 - 유무 확인</h2>
+    <input
+      type="text"
+      id="user-phone"
+      placeholder="010-xxxx-xxxx 중간에 하이픈 쓰기"
+    />
+    <button onclick="checkPhone">번호 확인</button>
+    <p id="error-msg2">유효하지 않음</p>
+    <script src="../js/15_정규표현식_예제2.js"></script>
+    <!--                         
+    @ 앞에는 \ 안쓴다
+    [  ] 안에 나열시 , 안쓴다
+
+    /^           :정규식 시작 
+    [a-zA-Z0-9.-]   :@ 작성전 영소문, 영대문 숫자 특문 포함 작성가능
+    +@              :아이디 뒤에 작성 필수!  
+    [a-zA-Z0-9.-가-힇]  :@ 뒤 회사명 등 도메인명 작성     
+    +\.                 :도메인명 뒤에 작성필수!  
+    [a-zA-Z가-힇    :. 뒤 kr com 등 도메인명 작성
+    {2,}]          :위 규칙 지키면서 최소 2자 이상 작성
+    $/             :정규식 끝
+    
+    -->
+  </body>
+</html>

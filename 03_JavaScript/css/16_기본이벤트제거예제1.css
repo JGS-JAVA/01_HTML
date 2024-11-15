@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+}
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: yellowgreen;
+}
+button {
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  background-color: #999;
+}
+
+/*
+disabled: hover 가 안됨
+enabled: h0ver 가 됨
+button 은 기본 활성화 상태
+hover 는 disabled 무관히 동작함
+disabled -> enabled 되면 버튼,커서 활성화됨
+*/
+button:enabled {
+  background-color: #007bff;
+  cursor: pointer;
+}
