@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>약관동의</title>
-    <link rel="stylesheet" href="../css/공통.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -29,10 +29,15 @@
         ><input type="checkbox" name="agree" id="agree3" required /> (필수)
         마케팅 정보 수신 동의</label
       ><br />
-      <button type="submit" id="signBtn" onclick="checkAgree()">
+      <button type="button" id="signBtn" onclick="checkAgree()">
         동의하고 회원가입
       </button>
+      <!-- form 태그 안의 버튼 submit 은 무조건 제출/ form 태그 옆 action 속성으로 이동한다
+        action 으로 이동할 주소 안적으면 계속 제자리에서 새로고침 된다
 
+      버튼 button 은 기본적으로 폼 제출 안해서 
+      자파스크립트에서 작성한 코드만 실행/ 조건 맞으면 제출/ 
+      -->
       <br />
     </form>
     <script>
@@ -41,7 +46,12 @@
         const agree2 = document.getElementById("agree2").checked;
         const agree3 = document.getElementById("agree3").checked;
         const agreeAll = agree1 && agree2 && agree3;
-        document.getElementById("signBtn").disabled = !agreeAll;
+
+        if (agreeAll) {
+          window.location.href = "회원가입.html";
+        } else {
+          alert("모든 필수 약관에 동의하기");
+        }
       }
     </script>
   </body>

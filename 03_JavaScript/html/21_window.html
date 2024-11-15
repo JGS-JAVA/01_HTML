@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window 내장 객체</title>
+  </head>
+  <body>
+    <h1>window 내장 객체</h1>
+    <pre>
+        웹 창 자체를 나타내는 객체
+        js 모든 기능에서 최우선
+        window 의 자식 객체
+        (Document Object Model) : Document
+        브라우저에서 내용 출력부분
+    </pre>
+    <hr />
+    <h3>window. 생략가능한 것</h3>
+    <pre>
+        window. -> 생략가능
+        window.alert("글자")
+        window.prompt("글자")
+        window.setTimeout(함수,지연시간)
+    </pre>
+    <hr />
+    <h3>window. 생략하면 애매한 것</h3>
+    <pre>
+        window.location.href = "이동할.html"
+        window. 생략시 파일경로 변경될 수 있어 
+        명확한 위치표현을 위해 window. 쓰기
+        window. = 내 컴퓨터 내의
+        location = 내가 현재 머물고 있는 html 파일경로
+        href = 주소를 가져와라
+
+        ip 주소
+        컴퓨터, 핸드폰 등은 위치설정 가능, 위치찾기 가능
+        미국 3.xxxxxx
+        한국 121.xxxxxx
+        중국 36.xxxxxx
+    </pre>
+    <hr />
+    <h6>href 와 src 차이점</h6>
+    <pre>
+        둘 다 링크, 리소스 참조시 사용하나 그 용도가 다름
+        href : 페이지 이동, 기능 참조 / 주로 css파일, 페이지 간 이동, 외부 웹 페이지 링크 등
+        src : 페이지 안에 외부 소스 삽입 / 주로 이미지, 동영상, js 파일 등
+    </pre>
+  </body>
+</html>
